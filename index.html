@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bmi-container">
+        <h1 class="header">BMI Calculator</h1>
+        <form >
+            <div class="form-row">
+                <label for="height">Height:</label>
+                <span>
+                    <input type="text" id="height" name="height" maxlength="3" pattern="^[\d]+$" required inputmode="numeric" onkeypress="return (event.keyCode >= 48 && event.keyCode<=57)" placeholder="">
+                    <span>cm</span>
+                </span>
+            </div>
+            <div class="form-row">
+                <label for="weight">Weight:</label>
+                <span>
+                    <input type="text" id="weight" name="weight" maxlength="3" pattern="^[\d]+$" required inputmode="numeric" onkeypress="return (event.keyCode >= 48 && event.keyCode<=57)" placeholder="">
+                    <span>kg</span>
+                </span>
+            </div>
+            <div class="form-row">
+                <label for=""></label>
+                <button type="submit" class="form-btn" onclick="event.preventDefault()">calculate</button>
+            </div>
+        
+        </form>
+        
+        <div class="status-container">
+            <h2 class="status-heading">BODY MASS INDEX (BMI)</h2>
+            <p class="status-para">BMI is a measurement that takes into account your height, and weight to produce a calculation. This calculation is a measurement of your body size and can be used to determine how your body weight is related to your height. It is a method of determining whether you may be underweight, average weight, overweight, or obese, but it has flaws.
+                <br><br>
+                Calculation Formula: <strong>Weight (kg) / Height (m)<sup>2</sup>.</strong> 
+            </p>
+            <div class="status-chart">
+                <span class="underweight-chart">
+                    <p>&lt; 18.5 BMI</p>
+                    <p>Underweight</p>
+                </span>
+                <span class="normal-chart">
+                    <p>18.5 &#x2010; 24.9 BMI</p>
+                    <p>Normal</p>
+                </span>
+                <span class="overweight-chart">
+                    <p>25 &#x2010; 29.9 BMI</p>
+                    <p>Overweight</p>
+                </span>
+                <span class="obese-chart">
+                    <p>30+ BMI</p>
+                    <p>Obese</p>
+                </span>
+            </div>
+        </div>
+</div>
+</body>
+</html>
